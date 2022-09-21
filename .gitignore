@@ -1,0 +1,4 @@
+# Project exclude paths
+/build/
+/c_scan_1.json
+/c_scan_2.json
