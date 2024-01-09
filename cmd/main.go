@@ -19,8 +19,8 @@ var rootDir = flag.String("r", "C:/", "Root folder to start scanning")
 var workers = flag.Int("w", runtime.NumCPU()*8, "amount of workers, default=runtime.NumCPU()*8")
 var saveTo = flag.String("s", "./report.json", "path to output json")
 
-var oldReportPath = flag.String("o", "./report1.json", "Path to report to track changes from")
-var newReportPath = flag.String("n", "./report2.json", "Path to report to track changes to")
+var oldReportPath = flag.String("o", "./report2.json", "Path to report to track changes from")
+var newReportPath = flag.String("n", "./report.json", "Path to report to track changes to")
 
 func main() {
 	flag.Parse()

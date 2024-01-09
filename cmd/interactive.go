@@ -1,17 +1,21 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
 	"folder-scan/internal/differ"
+	"os"
+	"strings"
 )
 
 func RunInteractive(root *differ.FolderChangeInfo) {
+	reader := bufio.NewReader(os.Stdin)
 	for {
 		fmt.Println(printFolderChange(root))
 
 		fmt.Println("Enter name of folder to go to. '.' to go up")
-		var input string
-		fmt.Scanln(&input)
+		input, _ := reader.ReadString('\n')
+		input = strings.Trim(input, "\r\n")
 		if input == "." {
 			return
 		}
